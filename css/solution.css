@@ -1,0 +1,85 @@
+
+    .main-class {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pseudo-header {
+        position: relative;
+        height: 240px;
+        min-width: 375px;
+        width: 100%;
+        background-image: url( '../images/bg-main-mobile.png' );
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .back-of-card {
+        position: absolute;
+        width: var( --image-width );
+        height: var( --image-height );
+        top: 2em;
+        right: 1em;
+        background-image: url( '../images/bg-card-back.png' );
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 5;
+    }
+
+    .front-of-card {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: var( --image-width );
+        height: var( --image-height );
+        top: 7.8em;
+        right: 4em;
+        background-image: url( '../images/bg-card-front.png' );
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 10;
+        padding: 1.2em;
+    }
+
+    .div-around-logo {
+        height: 40%;
+    }
+
+    .div-with-text {
+        height: 30%;
+    }
+
+    .size-logo {
+        width: 4em;
+    }
+
+    @media screen and ( min-width: 1024px ) {
+
+        :root {
+            --image-width: 30rem;
+        }
+
+        .main-class {
+            flex-direction: row;
+        }
+
+        .pseudo-header {
+            background-image: url( '../images/bg-main-desktop.png' );
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            min-width: 350px;
+            width: 35%;
+        }
+
+        .front-of-card {
+            top: 12em;
+            left: 12em;
+        }
+
+        .back-of-card {
+            top: 32em;
+            left: 18em;
+        }
+
+    }

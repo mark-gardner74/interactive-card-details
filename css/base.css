@@ -1,0 +1,171 @@
+
+    :root {
+
+/*  Font Sizes  */
+
+        --fs-default: 16px;
+
+        --body-m: 1.125rem;
+        --body-s: 1rem;
+        --body-xs: 0.6rem;
+
+        --break-width-small: 360px;
+        --break-width-tablet: 768px;
+        --break-width-desktop: 1024px;
+        --break-width-largest: 1440px;
+
+        --image-width: 17.87rem;
+        --image-height: calc( var( --image-width ) * 0.5489 );
+
+        /*
+
+
+        --heading-l: 3.5rem;
+        --heading-m: 2.5rem;
+        --heading-s: 2rem;
+
+        --body-m: 1.125rem;
+        --body-s: 1rem;
+
+        !*  Widths  *!
+
+        --min-width-all: 320px;
+        --max-width-all: 1024px;
+
+        --break-width-small: 360px;
+        --break-width-tablet: 768px;
+        --break-width-desktop: 1024px;
+        --break-width-largest: 1440px;
+
+        --break-size: var( --break-width-small );
+
+        !*  Colours *!
+
+        --black: rgb( 3, 3, 3 );
+        --medium-brown: rgb( 122, 116, 110 );
+        --light-cream: rgb( 255, 247, 240 );
+
+        --galactic-blue: rgb( 117, 92, 222 );
+        --summer-yellow: rgb( 246, 165, 96 );
+        --pink: rgb( 243, 158, 158 );
+        --light-red: rgb( 243, 158, 158 );
+        --cyan: rgb( 97, 196, 183 );
+        --dark-purple: rgb( 85, 32, 73 );
+
+        --white-to-grey: linear-gradient( rgb( 255, 255, 255 ), rgb( 240, 241, 255 ) );
+        */
+
+    }
+
+    * {
+        font-size: var( --fs-default );
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        scroll-margin: 2rem;
+    }
+
+    html, body {
+        font-family: 'Roboto', sans-serif;  /*  This works with the Jakarta Font    */
+        margin: 0 auto;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        max-width: var( --break-width-largest );
+    }
+
+    img, picture, svg {
+        display: block;
+        max-width: 100%;
+    }
+
+    .card-number {
+        font-size: var( --body-m );
+        letter-spacing: 2.2px;
+    }
+
+    .card-personal-details {
+        font-size: var( --body-xs );
+        letter-spacing: 1.29px;
+        text-transform: uppercase;
+    }
+
+    .flex-centre-between {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /*
+
+            .heading-l {
+                font-size: var( --heading-l );
+                line-height: 70px;
+            }
+
+            .heading-m {
+                font-size: var( --heading-m );
+                line-height: 51px;
+            }
+
+            .heading-s {
+                font-size: var( --heading-s );
+                line-height: 40px;
+            }
+
+            .body-m {
+                font-size: var( --body-m );
+                line-height: 28px;
+            }
+
+            .medium-brown {
+                color: var( --medium-brown );
+            }
+
+            .bold-text {
+                font-weight: bold;
+            }
+
+            .base-button {
+                cursor: pointer;
+                color: white;
+                padding: 1em 2em;
+                border-radius: 90px;
+            }
+
+            .base-arrow {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var( --black );
+                width: 4em;
+                height: 4em;
+                border-radius: 90px;
+                cursor: pointer;
+            }
+
+            .base-arrow:hover {
+                background-color: var( --galactic-blue );
+            }
+
+            .button-one {
+                background-color: var( --black );
+                color: var( --light-cream );
+            }
+
+            .button-one:hover {
+                background-color: var( --galactic-blue );
+            }
+
+            .button-two {
+                background-color: var( --light-red );
+                color: var( --light-cream );
+            }
+
+            .button-two:hover {
+                background-color: var( --summer-yellow );
+            }
+        */
