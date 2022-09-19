@@ -4,6 +4,10 @@
         flex-direction: column;
     }
 
+    .client-width {
+        min-width: 375px;
+    }
+
     .pseudo-header {
         position: relative;
         height: 240px;
@@ -53,10 +57,79 @@
         width: 4em;
     }
 
-    @media screen and ( min-width: 1024px ) {
+    .pseudo-body {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2em;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .pseudo-body > span {
+        margin-bottom: 2em;
+    }
+
+    .grid-mm-yy-cvc-gap {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .card-number {
+        font-size: var( --body-m );
+        letter-spacing: var( --letter-space-large );
+    }
+
+    .card-personal-details {
+        font-size: var( --body-xs );
+        letter-spacing: var( --letter-space-small );
+        text-transform: uppercase;
+    }
+
+    .flex-centre-between {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .buffer-from-header {
+        margin-top: 5em;
+        margin-left: 0;
+    }
+
+    #exp-date-month, #exp-date-year {
+        width: 4rem;
+    }
+
+    #cvc {
+        width: 7rem;
+    }
+
+    .format-error-text {
+        margin-top: 0.2em;
+        font-size: var( --fs-small );
+        color: rgb( 255, 0, 0, 0.5 );
+    }
+
+    .hide-me {
+        visibility: hidden;
+    }
+
+    .big-button {
+        width: 70%;
+        color: white;
+        background-color: var( --deep-violet );
+        text-align: center;
+        padding: 1em 2em;
+        border-radius: 0.5em;
+        align-self: center;
+        margin-top: 3em;
+        font-size: var( --fs-medium );
+    }
+
+    @media screen and ( min-width: 768px ) {
 
         :root {
-            --image-width: 30rem;
+            --image-width: 20rem;
         }
 
         .main-class {
@@ -68,6 +141,62 @@
             background-repeat: no-repeat;
             background-size: cover;
             height: 100vh;
+            min-width: 250px;
+            width: 25%;
+        }
+
+        .pseudo-body {
+            height: 60vh;
+            align-self: flex-start;
+        }
+
+        .front-of-card {
+            top: 8em;
+            left: 6em;
+        }
+
+        .back-of-card {
+            top: 20em;
+            left: 8em;
+        }
+
+        .buffer-from-header {
+            margin-top: 0;
+            margin-left: 13em;
+        }
+    }
+
+    @media screen and ( min-width: 1024px ) {
+
+        :root {
+            --image-width: 25rem;
+        }
+
+        .pseudo-body {
+            height: 80vh;
+        }
+
+        input[type=text] {
+            background-color: white;
+            border: 1px solid #CCC;
+            border-radius: 0.5rem;
+            padding: 0.75em;
+            height: 2.5rem;
+            font-size: 1.2rem;
+        }
+
+        label {
+            font-size: var( --fs-default );
+            margin-bottom: 0.5em;
+            text-transform: uppercase;
+            letter-spacing: var( --letter-space-small );
+        }
+
+        .client-width {
+            width: 1024px;
+        }
+
+        .pseudo-header {
             min-width: 350px;
             width: 35%;
         }
@@ -78,8 +207,18 @@
         }
 
         .back-of-card {
-            top: 32em;
+            top: 28em;
             left: 18em;
         }
 
+        .buffer-from-header {
+            margin-top: 0;
+            margin-left: 22em;
+        }
+    }
+
+    @media screen and ( min-width: 1440px ) {
+        .client-width {
+            width: 1024px;
+        }
     }

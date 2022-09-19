@@ -23,11 +23,11 @@
         </head>
         <body>
 
-            <header>
+            <header class="client-width">
 
             </header>
 
-            <main class="main-class">
+            <main class="main-class client-width">
 
                 <div class="pseudo-header">
                     <div class="back-of-card"></div>
@@ -35,46 +35,54 @@
                         <div class="div-around-logo">
                             <img class="size-logo" src="images/card-logo.svg" alt="Card Logo"/>
                         </div>
-                        <div class="div-with-text card-number flex-centre-between">
+                        <div id="card-personal-details-number" class="div-with-text card-number flex-centre-between">
                             0000 0000 0000 0000
                         </div>
                         <div class="div-with-text flex-centre-between">
-                            <span class="card-personal-details">Jane Appleseed</span>
-                            <span class="card-personal-details">00/00</span>
+                            <span id="card-personal-details-name">Jane Appleseed</span>
+                            <span id="card-personal-details-dates" class="card-personal-details-dates">00/00</span>
                         </div>
                     </div>
                 </div>
-                <div class="pseudo-body"></div>
 
-some extra text
-<!--
-                0000 0000 0000 0000
-                Jane Appleseed
-                00/00
+                <div class="buffer-from-header"></div>
 
-                000
+                <div id="form-and-result" class="pseudo-body client-width">
+                    <label for="cardholder-name">Cardholder Name</label>
+                    <div>
+                        <input id="cardholder-name" type="text" size="25" placeholder="e.g. Jane Appleseed" required pattern="[A-Za-z -']+" />
+                    </div>
+                    <span id="cardholder-name-err" class="format-error-text hide-me">Please enter a valid name</span>
 
-                Cardholder Name
-                e.g. Jane Appleseed
+                    <label for="card-number">Card Number</label>
+                    <div>
+                        <input id="card-number" type="text" size="25" placeholder="e.g. 1234 5678 9123 0000" required maxlength="19" pattern="[0-9 ]+" />
+                    </div>
+                    <span id="card-number-err" class="format-error-text hide-me">The card number can only be numeric</span>
 
-                Card Number
-                e.g. 1234 5678 9123 0000
+                    <div class="grid-mm-yy-cvc-gap" >
+                        <label for="exp-date-month">Expiry Date (MM/YY)</label>
+                        <label for="cvc">CVC</label>
+                        <div>
+                            <input id="exp-date-month" type="text" placeholder="MM" required minlength="2" maxlength="2" pattern="[0-9][0-2]" />
+                            <span class="large-text">/</span>
+                            <input id="exp-date-year" type="text" placeholder="YY" required minlength="2" maxlength="2" pattern="[2-4][0-9]" />
+                        </div>
+                        <input id="cvc" name="cvc" type="text" placeholder="e.g. 123" required minlength="3" maxlength="3" pattern="\d+" />
+                        <span id="exp-date-year-err" class="format-error-text hide-me">MM/YY should be 0-12 22+</span><span id="cvc-err" class="format-error-text hide-me">CVC is a three digit code</span>
+                    </div>
 
-                Exp. Date (MM/YY)
-                MM
-                YY
+                    <div id="confirm-button" class="big-button">Confirm</div>
+                </div>
 
-                CVC
-                e.g. 123
+                <div id="result-success" class="hide-me">
 
-                Confirm
-
-                Thank you!
-                We've added your card details
-                Continue
--->
+                    Thank you!
+                    We've added your card details
+                    Continue
 
 
+                </div>
 
             </main>
 
@@ -85,5 +93,7 @@ some extra text
             Coded by <a href="#">Your Name Here</a>.
         </div>
 -->
+
+            <script src="js/form-validation.js"></script>
         </body>
     </html>

@@ -4,6 +4,12 @@
 /*  Font Sizes  */
 
         --fs-default: 16px;
+        --fs-small: calc( var( --fs-default ) * 0.8 );
+        --fs-medium: calc( var( --fs-default ) * 1.1 );
+        --fs-large: calc( var( --fs-default ) * 1.5 );
+
+        --letter-space-small: 1.29px;
+        --letter-space-large: 2.2;
 
         --body-m: 1.125rem;
         --body-s: 1rem;
@@ -17,43 +23,12 @@
         --image-width: 17.87rem;
         --image-height: calc( var( --image-width ) * 0.5489 );
 
-        /*
+/*  Colours */
 
-
-        --heading-l: 3.5rem;
-        --heading-m: 2.5rem;
-        --heading-s: 2rem;
-
-        --body-m: 1.125rem;
-        --body-s: 1rem;
-
-        !*  Widths  *!
-
-        --min-width-all: 320px;
-        --max-width-all: 1024px;
-
-        --break-width-small: 360px;
-        --break-width-tablet: 768px;
-        --break-width-desktop: 1024px;
-        --break-width-largest: 1440px;
-
-        --break-size: var( --break-width-small );
-
-        !*  Colours *!
-
-        --black: rgb( 3, 3, 3 );
-        --medium-brown: rgb( 122, 116, 110 );
-        --light-cream: rgb( 255, 247, 240 );
-
-        --galactic-blue: rgb( 117, 92, 222 );
-        --summer-yellow: rgb( 246, 165, 96 );
-        --pink: rgb( 243, 158, 158 );
-        --light-red: rgb( 243, 158, 158 );
-        --cyan: rgb( 97, 196, 183 );
-        --dark-purple: rgb( 85, 32, 73 );
-
-        --white-to-grey: linear-gradient( rgb( 255, 255, 255 ), rgb( 240, 241, 255 ) );
-        */
+        --deep-violet: #21092F;
+        --purpleish-grey: #8F8694;
+        --light-grey: #DFDEE0;
+        --red: #FF5050;
 
     }
 
@@ -67,7 +42,7 @@
     }
 
     html, body {
-        font-family: 'Roboto', sans-serif;  /*  This works with the Jakarta Font    */
+        font-family: 'Roboto', sans-serif;
         margin: 0 auto;
     }
 
@@ -77,26 +52,52 @@
         max-width: var( --break-width-largest );
     }
 
+    input[type=text]::placeholder {
+        color: #CCC;
+    }
+
+    input[type=text] {
+        background-color: white;
+        border: 1px solid #CCC;
+        border-radius: 0.5rem;
+        padding: 0.75em;
+        height: 2em;
+        font-size: 1rem;
+    }
+
+    input[type=text]:focus {
+        outline: none;
+        border: 1px solid #AAA;
+        color: #888;
+    }
+
+    input[type=text]:invalid:not(:empty) {
+        outline: none;
+        border: 1px solid rgb( 255, 0, 0, 0.3 );
+        color: #888;
+    }
+
+    input[type=text]:valid {
+        outline: none;
+        border: 1px solid green;
+        color: #888;
+    }
+
+    label {
+        font-size: var( --fs-small );
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+        letter-spacing: var( --letter-space-small );
+    }
+
     img, picture, svg {
         display: block;
         max-width: 100%;
     }
 
-    .card-number {
-        font-size: var( --body-m );
-        letter-spacing: 2.2px;
-    }
-
-    .card-personal-details {
-        font-size: var( --body-xs );
-        letter-spacing: 1.29px;
-        text-transform: uppercase;
-    }
-
-    .flex-centre-between {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .large-text {
+        font-size: var( --fs-large );
+        color: #888;
     }
 
     /*
