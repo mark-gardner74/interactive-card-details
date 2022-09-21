@@ -136,12 +136,6 @@
         width: 4em;
     }
 
-    .adjust-flex-for-thanks {
-        height: 35vh !important;
-        align-items: center !important;
-        justify-content: space-around;
-    }
-
     .space-evenly {
         margin-bottom: 2rem;
     }

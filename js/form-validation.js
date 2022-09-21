@@ -159,8 +159,12 @@
 
         if( _submit_success ) {
 
-            document.getElementById( "form-and-result" ).classList.add( "hide-me-plus" );
-            document.getElementById( "result-success" ).classList.remove( "hide-me" );
+            document.getElementById( "form-and-result" ).innerHTML =
+                `<div class="buffer-top"></div>
+                    <img src="images/icon-complete.svg" class="size-tick-image space-evenly" />
+                    <h1 class="space-evenly">Thank you!</h1>
+                    <p>We've added your card details</p>
+                <div id="continue-button" class="big-button">Continue</div>`;
         }
     } );
 
