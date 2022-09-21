@@ -114,6 +114,11 @@
         visibility: hidden;
     }
 
+    .hide-me-plus {
+        visibility: hidden;
+        display: none;
+    }
+
     .big-button {
         width: 70%;
         color: white;
@@ -124,6 +129,21 @@
         align-self: center;
         margin-top: 3em;
         font-size: var( --fs-medium );
+    }
+
+    .size-tick-image {
+        height: 4em;
+        width: 4em;
+    }
+
+    .adjust-flex-for-thanks {
+        height: 35vh !important;
+        align-items: center !important;
+        justify-content: space-around;
+    }
+
+    .space-evenly {
+        margin-bottom: 2rem;
     }
 
     @media screen and ( min-width: 768px ) {
@@ -142,12 +162,16 @@
             background-size: cover;
             height: 100vh;
             min-width: 250px;
-            width: 25%;
+            width: 768px;
         }
 
         .pseudo-body {
-            height: 60vh;
+            height: 40vh;
             align-self: flex-start;
+        }
+
+        .client-width {
+            width: 768px;
         }
 
         .front-of-card {
@@ -164,6 +188,10 @@
             margin-top: 0;
             margin-left: 13em;
         }
+
+        .buffer-top {
+            height: 20vh;
+        }
     }
 
     @media screen and ( min-width: 1024px ) {
@@ -173,7 +201,7 @@
         }
 
         .pseudo-body {
-            height: 80vh;
+            height: 40vh;
         }
 
         input[type=text] {
@@ -214,6 +242,10 @@
         .buffer-from-header {
             margin-top: 0;
             margin-left: 22em;
+        }
+
+        .buffer-top {
+            margin-top: 35em;
         }
     }
 

@@ -48,6 +48,7 @@
                 <div class="buffer-from-header"></div>
 
                 <div id="form-and-result" class="pseudo-body client-width">
+                    <div class="buffer-top"></div>
                     <label for="cardholder-name">Cardholder Name</label>
                     <div>
                         <input id="cardholder-name" type="text" size="25" placeholder="e.g. Jane Appleseed" required pattern="[A-Za-z -']+" />
@@ -56,7 +57,7 @@
 
                     <label for="card-number">Card Number</label>
                     <div>
-                        <input id="card-number" type="text" size="25" placeholder="e.g. 1234 5678 9123 0000" required maxlength="19" pattern="[0-9 ]+" />
+                        <input id="card-number" type="text" size="25" placeholder="e.g. 1234 5678 9123 0000" required maxlength="19" minlength="19" pattern="[0-9 ]+" />
                     </div>
                     <span id="card-number-err" class="format-error-text hide-me">The card number can only be numeric</span>
 
@@ -75,13 +76,12 @@
                     <div id="confirm-button" class="big-button">Confirm</div>
                 </div>
 
-                <div id="result-success" class="hide-me">
-
-                    Thank you!
-                    We've added your card details
-                    Continue
-
-
+                <div id="result-success" class="pseudo-body client-width adjust-flex-for-thanks hide-me">
+                    <div class="buffer-top"></div>
+                    <img src="images/icon-complete.svg" class="size-tick-image space-evenly" />
+                    <h1 class="space-evenly">Thank you!</h1>
+                    <p>We've added your card details</p>
+                    <div id="continue-button" class="big-button">Continue</div>
                 </div>
 
             </main>

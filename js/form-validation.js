@@ -67,18 +67,21 @@
             return __formatted_item.trim();
         }
 
-        _cardnumber_value.value = reformatWithSpaces( _cardnumber_value.value );
+        if( _cardnumber_value.value !== "" ) {
+            _cardnumber_value.value = reformatWithSpaces( _cardnumber_value.value ).trim();
 
-        if( fp_card_number ) {
+            if( fp_card_number ) {
 
-            _pointer_html.innerHTML = "";
-            fp_card_number = false;
+                _pointer_html.innerHTML = "";
+                fp_card_number = false;
+            }
+
+            if( checkForInvalid( "card-number", "card-number-err" ) ) {
+
+                _pointer_html.innerHTML = _cardnumber_value.value;
+            }
         }
 
-        if( checkForInvalid( "card-number", "card-number-err" ) ) {
-
-            _pointer_html.innerHTML = _cardnumber_value.value;
-        }
     } );
 
     document.getElementById( "exp-date-month" ).addEventListener( "keyup", function() {
@@ -136,7 +139,18 @@
         for( let _i of _columns_to_validate ) {
 
             let _working_div = document.getElementById( _i );
+            let _working_div_err;
+
             if( !valid_field( _i ) && _working_div.innerHTML.trim() === "" ) {
+
+                if( [ "exp-date-month", "exp-date-year" ].includes( _i  ) ) {
+                    _working_div_err = document.getElementById( "exp-date-year-err" )
+                }
+                else {
+                    _working_div_err = document.getElementById( _i + "-err" );
+                }
+                _working_div_err.classList.remove( "hide-me" );
+
                 _working_div.focus();
                 _submit_success = false;
                 break;
@@ -145,7 +159,8 @@
 
         if( _submit_success ) {
 
-            document.getElementById( "form-and-result" ).innerHTML = document.getElementById( "result-success" ).innerHTML;
+            document.getElementById( "form-and-result" ).classList.add( "hide-me-plus" );
+            document.getElementById( "result-success" ).classList.remove( "hide-me" );
         }
     } );
 

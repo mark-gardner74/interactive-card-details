@@ -95,6 +95,11 @@
         max-width: 100%;
     }
 
+    h1 {
+        font-size: 2.2rem;
+        font-weight: bold;
+    }
+
     .large-text {
         font-size: var( --fs-large );
         color: #888;
