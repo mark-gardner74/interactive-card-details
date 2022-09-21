@@ -69,6 +69,10 @@
         margin-bottom: 2em;
     }
 
+    .flex-center {
+        align-items: center;
+    }
+
     .grid-mm-yy-cvc-gap {
         display: grid;
         grid-template-columns: auto auto;
